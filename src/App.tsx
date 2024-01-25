@@ -1,24 +1,12 @@
-import './App.css'
+import Game from "./components/Game";
+import { GameContextProvider } from "./context/GameContext";
 
 function App() {
-
   return (
-    <div>
-      <div>
-        <h1>Memory Game</h1>
-
-        <div>
-          <p>Click on an image to earn points, but don't click on any more than once!</p>
-        </div>
-
-        <div>
-          <p>Score: 0 | Top Score: 0</p>
-        </div>
-
-
-      </div>
-    </div>
-  )
+    <GameContextProvider>
+      <Game />
+    </GameContextProvider>
+  );
 }
 
-export default App
+export default App;
